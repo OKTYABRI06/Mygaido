@@ -1,0 +1,256 @@
+/* セクション全体の余白と背景色 */
+.contact-section {
+  padding: 6rem 1.5rem;
+  background-color: #ffffff;
+  font-family: sans-serif;
+}
+
+@media (max-width: 600px) {
+  .contact-section {
+    padding: 3rem 1rem;
+  }
+}
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: #1e293b;
+  margin-bottom: 3rem;
+}
+/* フォーム本体 */
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2.5rem 2rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0;
+}
+
+.form-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #1e293b;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #475569;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 12px 16px;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group textarea { resize: vertical; }
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15); /* 発光効果 */
+}
+
+.submit-btn {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  background-color: #f0a85d;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.submit-btn:hover { background-color: #e89c4a; }
+.submit-btn:active { transform: scale(0.98); }
+
+/* モバイル対応：パディングの縮小 */
+@media (max-width: 600px) {
+  .contact-form {
+    padding: 2rem 1.25rem;
+  }
+}
+footer {
+  text-align: center;
+  padding: 1.5rem 0;
+  background-color: #facb98;
+  color:#1e293b;
+  font-size: 1.5rem;
+}
+
+
+/* ===== 内容確認・送信完了ページ（confirmation.php / complete.php） ===== */
+
+/* ==========================================================================
+   共通設定・案内テキスト
+   ========================================================================== */
+.guide-note-contact {
+  max-width: 780px;
+  margin: 0 auto 25px;
+  padding: 12px 16px;
+  background-color: #fefaf4; /* 薄いオレンジ（案内用） */
+  border: 1px solid #fcd9b6;
+  border-radius: 8px;
+  color: #4a5568; /* 濃いグレー文字 */
+  text-align: center;
+  
+}
+
+/* エラー時の上部注意メッセージ */
+.guide-caution {
+  max-width: 700px;
+  margin: 0 auto 25px;
+  padding: 12px 16px;
+  background-color: #fef2f2; /* 薄い赤（警告用） */
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  color: #bebcbc; /* 濃い赤文字 */
+  text-align: center;
+  line-height: 1.6;
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   確認用ボックス（枠組み）
+   ========================================================================== */
+.confirm-box {
+  max-width: 700px;
+  margin: 0 auto 40px;
+  padding: 25px 30px;
+  border: 1px solid #e2e8f0;   /* 【修正】優しいグレーの枠線 */
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03); /* ほんのり影をつける */
+}
+
+/* 各入力項目の行 */
+.confirm-row {
+  padding: 16px 0;
+  border-bottom: 1px solid #edf2f7; /* 行の区切り線 */
+}
+.confirm-row:last-child {
+  border-bottom: none; /* 最後の行の線は消す */
+}
+
+/* フォームの項目名（ラベル） */
+.confirm-label {
+  margin: 0 0 6px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #4a5568;
+}
+
+/* ==========================================================================
+   入力された値の表示（通常時 / エラー時）
+   ========================================================================== */
+/* 通常時の値の表示ボックス */
+.confirm-value {
+  margin: 0;
+  padding: 10px 14px;
+  background-color: #f8fafc; /* 【修正】すっきりした薄いグレー（元の#fffaf4でもOK） */
+  border-left: 4px solid #cbd5e1; /* 左側に落ち着いたアクセント線 */
+  border-radius: 0 6px 6px 0;
+  color: #1e293b;
+  word-break: break-all; /* 長い英数字でも自動改行 */
+  line-height: 1.5;
+}
+
+/* 【修正】入力エラー項目（名前やフリガナが空っぽの時） */
+.confirm-value.confirm-error {
+  color: #dc2626; /* 警告の赤文字 */
+  font-weight: 600;
+  background-color: #fef2f2; /* 背景を薄い赤に */
+  border-left-color: #dc2626; /* 左の線も赤に */
+}
+
+/* ==========================================================================
+   ボタンエリア
+   ========================================================================== */
+.confirm-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.confirm-form {
+  margin: 0;
+}
+
+/* 「戻る」と「送信」の共通スタイル */
+.back-btn,
+.confirm-form .submit-btn {
+  display: inline-block;
+  width: auto;
+  min-width: 160px; /* 【修正】少し押しやすくワイドに */
+  padding: 12px 30px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 6px;
+  text-align: center;
+  line-height: 1.4;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  box-sizing: border-box;
+}
+
+/* 戻るボタン（白背景にダークグレーの枠線） */
+.back-btn {
+  color: #4a5568;
+  background-color: #ffffff;
+  border: 2px solid #718096;
+  text-decoration: none;
+}
+.back-btn:hover,
+.back-btn:focus {
+  color: #ffffff;
+  background-color: #4a5568; /* ホバーで背景が濃くなる */
+  border-color: #4a5568;
+  text-decoration: none;
+}
+
+/* 送信ボタン（オレンジをベースにした一般的なプライマリボタン） */
+.confirm-form .submit-btn {
+  color: #ffffff;
+  background-color: #f0a85d; /* 温かみのあるオレンジ */
+  border: 2px solid #f0a85d;
+}
+.confirm-form .submit-btn:hover,
+.confirm-form .submit-btn:focus {
+  background-color: #e89c4a; /* ホバーで少し濃く */
+  border-color: #e89c4a;
+}
+
+/* ==========================================================================
+   スマートフォン表示（レスポンシブ）
+   ========================================================================== */
+@media (max-width: 600px) {
+  .confirm-box {
+    padding: 15px 20px;
+  }
+  .confirm-buttons {
+    flex-direction: column-reverse; /* 【修正】スマホでは「戻る」が下、「送信」が上になるように配置 */
+    gap: 12px;
+  }
+  .back-btn,
+  .confirm-form,
+  .confirm-form .submit-btn {
+    width: 100%; /* 横幅いっぱいに広げる */
+  }
+}

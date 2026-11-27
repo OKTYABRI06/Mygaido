@@ -1,0 +1,418 @@
+/*=========================== */
+:root {
+    --primary-color: #2c3e50;
+    --accent-color: #e74c3c;
+    --bg-color: #f8f9fa;
+    --card-bg: #ffffff;
+    --text-color: #333;
+    --base-font: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+}
+
+body {
+    font-family: var(--base-font);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 20px;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.shop-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .shop-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* マップエリアのダミー（実際はGoogle Maps等に置き換え可能） */
+.map-wrapper {
+    background-color: #e5e3df;
+    border-radius: 12px;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+}
+
+.map-mock {
+    text-align: center;
+    color: #666;
+}
+
+/* 擬似ピン（マップ上の視覚効果） */
+.map-pin {
+    position: absolute;
+    background-color: var(--accent-color);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.pin1 {
+    top: 60%;
+    left: 50%;
+}
+
+/* 大阪 */
+.pin2 {
+    top: 45%;
+    left: 60%;
+}
+
+/* 滋賀 */
+.pin3 {
+    top: 48%;
+    left: 53%;
+}
+
+/* 京都 */
+.pin4 {
+    top: 55%;
+    left: 35%;
+}
+
+/* 兵庫 */
+
+/* カードリストエリア */
+.card-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-height: 500px;
+    overflow-y: auto;
+    padding-right: 5px;
+}
+
+/* 店舗カードのスタイル */
+.shop-card {
+    background-color: var(--card-bg);
+    border-left: 5px solid var(--primary-color);
+    border-radius: 0 8px 8px 0;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+}
+
+.shop-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-left-color: var(--accent-color);
+}
+
+.shop-card h3 {
+    margin: 0 0 10px 0;
+    font-size: 18px;
+    color: var(--primary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.shop-tag {
+    font-size: 13px;
+    background-color: #eef2f7;
+    color: var(--primary-color);
+    padding: 3px 8px;
+    border-radius: 3px;
+}
+
+.shop-card p {
+    margin: 5px 0;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.shop-address {
+    color: #666;
+    font-size: 14px !important;
+}
+
+/* スクロールバーのカスタム */
+.card-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.card-list::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.card-list::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 3px;
+}
+
+/* =========================================
+   全体レイアウト（固有プレフィックス: kd-kansai-）
+   ※フォント種類・文字サイズを上記と統一
+========================================= */
+.kd-kansai-section {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem;
+  font-family: var(--base-font);
+  color: var(--text-color);
+  font-size: 16px;
+  line-height: 1.7;
+  box-sizing: border-box;
+}
+
+.kd-kansai-section *,
+.kd-kansai-section *::before,
+.kd-kansai-section *::after {
+  box-sizing: inherit;
+  font-family: inherit;
+}
+
+.kd-kansai-heading {
+  font-size: 26px;
+  border-bottom: 3px solid #d96b27;
+  padding-bottom: 0.5rem;
+  margin: 0 0 1rem;
+}
+
+.kd-kansai-lead {
+  font-size: 16px;
+  margin: 0 0 2rem;
+}
+
+.kd-kansai-sub {
+  font-size: 20px;
+  margin: 2rem 0 1rem;
+  padding-left: 0.75rem;
+  border-left: 4px solid #d96b27;
+}
+
+.kd-kansai-caption {
+  font-size: 14px;
+  color: #666;
+  margin: 0.75rem 0 0;
+}
+
+.kd-kansai-note {
+  background-color: #f7f7f7;
+  border-radius: 6px;
+  padding: 1rem 1.25rem;
+  margin: 2rem 0 0;
+  font-size: 15px;
+}
+
+/* =========================================
+   場所のイメージ（簡易マップタイル）
+========================================= */
+.kd-kansai-map {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+}
+
+.kd-kansai-tile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0.9rem 1rem;
+  border-radius: 8px;
+  background-color: #f4f4f4;
+  border: 2px solid #e0e0e0;
+  text-decoration: none;
+  color: #888;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.kd-kansai-tile-has {
+  background-color: #fff8f3;
+  border-color: #e67e22;
+  color: #333;
+}
+
+.kd-kansai-tile-has:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(230, 126, 34, 0.2);
+}
+
+.kd-kansai-tile-name {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.kd-kansai-tile-info {
+  font-size: 14px;
+  margin-top: 0.25rem;
+}
+
+.kd-kansai-tile-has .kd-kansai-tile-info {
+  color: #d96b27;
+  font-weight: bold;
+}
+
+/* =========================================
+   お店の情報カード（同じサイズ・デザイン）
+========================================= */
+.kd-kansai-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+.kd-kansai-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border: 1px solid #e2e2e2;
+  border-top: 4px solid #d96b27;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.kd-kansai-card-title {
+  font-size: 18px;
+  margin: 0 0 0.75rem;
+  line-height: 1.4;
+  min-height: 2.8em;
+  display: flex;
+  align-items: center;
+}
+
+.kd-kansai-tags {
+  margin: 0 0 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.kd-kansai-tag {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: bold;
+  padding: 0.25rem 0.7rem;
+  border-radius: 999px;
+  background-color: #fdf0e6;
+  color: #c85a17;
+  border: 1px solid #f3cba8;
+}
+
+.kd-kansai-info {
+  margin: 0 0 1rem;
+  padding: 0.75rem 0;
+  border-top: 1px dashed #ddd;
+  border-bottom: 1px dashed #ddd;
+  font-size: 15px;
+}
+
+.kd-kansai-info dt {
+  font-weight: bold;
+  color: #555;
+  font-size: 13px;
+  margin-top: 0.65rem;
+}
+
+.kd-kansai-info dt:first-child {
+  margin-top: 0;
+}
+
+.kd-kansai-info dd {
+  margin: 0.15rem 0 0;
+  font-size: 15px;
+  word-break: break-all;
+}
+
+.kd-kansai-info a {
+  color: #c85a17;
+  text-decoration: underline;
+}
+
+.kd-kansai-desc {
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0 0 1.25rem;
+}
+
+/* =========================================
+   地図アコーディオン（常にカード最下部に配置）
+========================================= */
+.kd-kansai-accordion {
+  margin-top: auto;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background-color: #fafafa;
+  overflow: hidden;
+}
+
+.kd-kansai-accordion summary {
+  padding: 0.65rem 1rem;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #444;
+}
+
+.kd-kansai-accordion summary::-webkit-details-marker {
+  display: none;
+}
+
+.kd-kansai-accordion summary::after {
+  content: "＋";
+  color: #d96b27;
+  font-weight: bold;
+}
+
+.kd-kansai-accordion[open] summary::after {
+  content: "－";
+}
+
+.kd-kansai-accordion-body {
+  padding: 0.75rem;
+  border-top: 1px solid #ddd;
+  background-color: #fff;
+}
+
+.kd-kansai-iframe {
+  width: 100%;
+  height: 200px;
+  border: 0;
+  border-radius: 4px;
+}
+
+.kd-kansai-accordion-body p {
+  margin: 0.5rem 0 0;
+  text-align: right;
+  font-size: 14px;
+}
+
+.kd-kansai-accordion-body a {
+  color: #c85a17;
+}
+
+/* =========================================
+   スマホ表示用レスポンシブ調整
+========================================= */
+@media (max-width: 640px) {
+  .kd-kansai-map {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .kd-kansai-card-title {
+    min-height: auto;
+  }
+}

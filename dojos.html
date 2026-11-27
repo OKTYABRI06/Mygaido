@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./CSS/dojos.css">
+    <link rel="stylesheet" href="./CSS/style.css">
+    
+    <title>道場｜弓道びぎなーず!</title>
+</head>
+
+<body>
+    <header>
+        <div class="container-fluid     main">
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                            <span class="sr-only">メニューを開く</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="index.html">
+                            <div class="emblem"><span>弓</span></div>
+                            <div class="text-group">
+                                <div class="title">弓道びぎなーず!</div>
+                                <div class="slogan">SLOGAN HERE</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="myNavbar">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="index.html">ホーム</a></li>
+                            <li><a href="about.html">弓道とは</a></li>
+                            <li><a href="shop.html">道具店</a></li>
+                            <li class="active"><a href="dojos.html">道場</a></li>
+                            <li><a href="contact.php">お問い合わせ</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main class="page-main">
+        <!-- ▼ ページの見出し ▼ -->
+        <section class="page-top">
+            <h1>道場</h1>
+            <p>弓道は、道場で指導を受けながら始めるのが基本です。自分に合う場所の探し方と、見学の流れを紹介します。</p>
+        </section>
+
+        <!-- ▼ 道場の探し方 ▼ -->
+        <section class="page-block">
+            <h2>道場の探し方</h2>
+            <div class="guide-mini-list">
+                <div class="guide-mini">
+                    <h3>地域の弓道場</h3>
+                    <p>市や県の弓道連盟、体育施設のホームページで、一般向けの弓道場や教室を探せます。</p>
+                </div>
+                <div class="guide-mini">
+                    <h3>学校・大学の弓道部</h3>
+                    <p>在学中なら、部活やサークルが最も身近です。新入生向けの体験会もあります。</p>
+                </div>
+                <div class="guide-mini">
+                    <h3>初心者教室</h3>
+                    <p>数回の講習で射法と作法を学べる教室があります。道具を貸してもらえる場合が多いです。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ▼ 関西の弓道場 ▼ -->
+        <section class="kd-kansai-section" id="kansai">
+            <h2 class="kd-kansai-heading">道場 *関西地方限定</h2>
+            <p class="kd-kansai-lead">関西にある、一般の人が練習に使える公営の弓道場を紹介します。弓道場ごとに、個人で使える時間や予約の方法が違います。行く前に、電話や公式サイトで確認しましょう。</p>
+
+            <h3 class="kd-kansai-sub">場所のイメージ</h3>
+            <div class="kd-kansai-map">
+                <div class="kd-kansai-tile kd-kansai-tile-has">
+                    <span class="kd-kansai-tile-name">滋賀県</span>
+                    <a class="kd-kansai-tile-info" href="#dojo-shiga">● 滋賀県立武道館</a>
+                </div>
+                <div class="kd-kansai-tile kd-kansai-tile-has">
+                    <span class="kd-kansai-tile-name">京都府</span>
+                    <a class="kd-kansai-tile-info" href="#dojo-kyoto">● 京都市武道センター</a>
+                </div>
+                <div class="kd-kansai-tile kd-kansai-tile-has">
+                    <span class="kd-kansai-tile-name">兵庫県</span>
+                    <a class="kd-kansai-tile-info" href="#dojo-hyogo">● 兵庫県立弓道場</a>
+                    <a class="kd-kansai-tile-info" href="#dojo-oji">● 神戸市立王子弓道場</a>
+                </div>
+                <div class="kd-kansai-tile kd-kansai-tile-has">
+                    <span class="kd-kansai-tile-name">大阪府</span>
+                    <a class="kd-kansai-tile-info" href="#dojo-osakajo">● 大阪城弓道場</a>
+                    <a class="kd-kansai-tile-info" href="#dojo-banpaku">● 万博弓道場</a>
+                </div>
+                <div class="kd-kansai-tile kd-kansai-tile-has">
+                    <span class="kd-kansai-tile-name">奈良県</span>
+                    <a class="kd-kansai-tile-info" href="#dojo-kashihara">● 橿原公苑弓道場</a>
+                    <a class="kd-kansai-tile-info" href="#dojo-nara">● ロート奈良弓道場</a>
+                </div>
+                <div class="kd-kansai-tile kd-kansai-tile-has">
+                    <span class="kd-kansai-tile-name">和歌山県</span>
+                    <a class="kd-kansai-tile-info" href="#dojo-tanabe">● 田辺市立弓道場</a>
+                </div>
+            </div>
+            <p class="kd-kansai-caption">位置関係を表した簡単な図です（実際の地図ではありません）。弓道場の名前を押すと、下の情報に移動します。</p>
+
+            <h3 class="kd-kansai-sub">弓道場の情報</h3>
+            <div class="kd-kansai-list">
+                <div class="kd-kansai-card" id="dojo-osakajo">
+                    <h3 class="kd-kansai-card-title">大阪城弓道場（おおさかじょうきゅうどうじょう）</h3>
+                    <p class="kd-kansai-tags">
+                        <span class="kd-kansai-tag">大阪府大阪市</span>
+                        <span class="kd-kansai-tag">公営</span>
+                    </p>
+                    <dl class="kd-kansai-info">
+                        <dt>住所</dt>
+                        <dd>〒540-0002 大阪府大阪市中央区大阪城3-4（大阪城公園内）</dd>
+                        <dt>電話</dt>
+                        <dd><a href="tel:0669419921">06-6941-9921</a></dd>
+                        <dt>営業時間</dt>
+                        <dd>午前 9:00〜12:00／午後 13:00〜17:00／夜間 18:00〜21:00</dd>
+                        <dt>定休日</dt>
+                        <dd>年末年始（12月30日〜1月2日）。施設点検などで臨時休館することがあります</dd>
+                        <dt>アクセス</dt>
+                        <dd>地下鉄中央線「森ノ宮駅」から徒歩約8分／JR環状線「大阪城公園駅」から徒歩約5分</dd>
+                        <dt>ウェブサイト</dt>
+                        <dd><a href="https://www.osakajo-kyudojo.jp/" target="_blank" rel="noopener">osakajo-kyudojo.jp</a></dd>
+                    </dl>
+                    <p class="kd-kansai-desc">近的競技の公式競技場です。射場は12人立ちで、的までは28m、巻藁が2台あります。土日祝は大会などの専用使用が多く、ほとんどは個人の練習に使われています。初心者向けの弓道教室（初級コース）も開かれていて、募集は抽選です。</p>
+                    <details class="kd-kansai-accordion">
+                        <summary>地図を表示</summary>
+                        <div class="kd-kansai-accordion-body">
+                            <iframe class="kd-kansai-iframe" src="https://maps.google.com/maps?q=%E5%A4%A7%E9%98%AA%E5%9F%8E%E5%BC%93%E9%81%93%E5%A0%B4%20%E5%A4%A7%E9%98%AA%E5%BA%9C%E5%A4%A7%E9%98%AA%E5%B8%82%E4%B8%AD%E5%A4%AE%E5%8C%BA%E5%A4%A7%E9%98%AA%E5%9F%8E3-4&output=embed&hl=ja" title="大阪城弓道場の地図" loading="lazy"></iframe>
+                            <p><a href="https://www.google.com/maps/search/?api=1&query=%E5%A4%A7%E9%98%AA%E5%9F%8E%E5%BC%93%E9%81%93%E5%A0%B4%20%E5%A4%A7%E9%98%AA%E5%BA%9C%E5%A4%A7%E9%98%AA%E5%B8%82%E4%B8%AD%E5%A4%AE%E5%8C%BA%E5%A4%A7%E9%98%AA%E5%9F%8E3-4" target="_blank" rel="noopener">Googleマップで開く</a></p>
+                        </div>
+                    </details>
+                </div>
+
+                <div class="kd-kansai-card" id="dojo-banpaku">
+                    <h3 class="kd-kansai-card-title">日本万国博覧会記念公園弓道場（万博弓道場）（にほんばんこくはくらんかいきねんこうえんきゅうどうじょう）</h3>
+                    <p class="kd-kansai-tags">
+                        <span class="kd-kansai-tag">大阪府吹田市</span>
+                        <span class="kd-kansai-tag">公営</span>
+                    </p>
+                    <dl class="kd-kansai-info">
+                        <dt>住所</dt>
+                        <dd>〒565-0826 大阪府吹田市千里万博公園6-5</dd>
+                        <dt>電話</dt>
+                        <dd><a href="tel:0668773355">06-6877-3355</a></dd>
+                        <dt>営業時間</dt>
+                        <dd>個人利用 9:00〜17:00（受付 9:00〜16:00）</dd>
+                        <dt>定休日</dt>
+                        <dd>毎週水曜日（祝日の場合は翌日）、年末年始</dd>
+                        <dt>アクセス</dt>
+                        <dd>大阪モノレール「公園東口駅」から徒歩約12分／万博記念公園「東駐車場」から徒歩約12分</dd>
+                        <dt>ウェブサイト</dt>
+                        <dd><a href="https://www.expo70-park.jp/sports/facility/archery-hall/" target="_blank" rel="noopener">expo70-park.jp</a></dd>
+                    </dl>
+                    <p class="kd-kansai-desc">近的8人立と遠的8人立の射場があります。大阪府で唯一、遠的射場を常設している公営の弓道場です。入会や見学は、電話で問い合わせます。</p>
+                    <details class="kd-kansai-accordion">
+                        <summary>地図を表示</summary>
+                        <div class="kd-kansai-accordion-body">
+                            <iframe class="kd-kansai-iframe" src="https://maps.google.com/maps?q=%E6%97%A5%E6%9C%AC%E4%B8%87%E5%9B%BD%E5%8D%9A%E8%A6%A7%E4%BC%9A%E8%A8%98%E5%BF%B5%E5%85%AC%E5%9C%92%E5%BC%93%E9%81%93%E5%A0%B4%20%E5%A4%A7%E9%98%AA%E5%BA%9C%E5%90%B9%E7%94%B0%E5%B8%82%E5%8D%83%E9%87%8C%E4%B8%87%E5%8D%9A%E5%85%AC%E5%9C%926-5&output=embed&hl=ja" title="日本万国博覧会記念公園弓道場（万博弓道場）の地図" loading="lazy"></iframe>
+                            <p><a href="https://www.google.com/maps/search/?api=1&query=%E6%97%A5%E6%9C%AC%E4%B8%87%E5%9B%BD%E5%8D%9A%E8%A6%A7%E4%BC%9A%E8%A8%98%E5%BF%B5%E5%85%AC%E5%9C%92%E5%BC%93%E9%81%93%E5%A0%B4%20%E5%A4%A7%E9%98%AA%E5%BA%9C%E5%90%B9%E7%94%B0%E5%B8%82%E5%8D%83%E9%87%8C%E4%B8%87%E5%8D%9A%E5%85%AC%E5%9C%926-5" target="_blank" rel="noopener">Googleマップで開く</a></p>
+                        </div>
+                    </details>
+                </div>
+
+                <div class="kd-kansai-card" id="dojo-kyoto">
+                    <h3 class="kd-kansai-card-title">京都市武道センター 弓道場（きょうとしぶどうせんたー きゅうどうじょう）</h3>
+                    <p class="kd-kansai-tags">
+                        <span class="kd-kansai-tag">京都府京都市</span>
+                        <span class="kd-kansai-tag">公営</span>
+                    </p>
+                    <dl class="kd-kansai-info">
+                        <dt>住所</dt>
+                        <dd>〒606-8323 京都府京都市左京区聖護院円頓美町46-2</dd>
+                        <dt>電話</dt>
+                        <dd><a href="tel:0757511255">075-751-1255</a></dd>
+                        <dt>営業時間</dt>
+                        <dd>9:00〜21:00</dd>
+                        <dt>定休日</dt>
+                        <dd>年末年始（12月29日〜1月3日）</dd>
+                        <dt>アクセス</dt>
+                        <dd>市バス「熊野神社前」から徒歩数分／京阪電車「神宮丸太町駅」から徒歩約10分（駐車場あり）</dd>
+                        <dt>ウェブサイト</dt>
+                        <dd><a href="https://www.kyoto-sports.or.jp/facilities/detail.php?id=15" target="_blank" rel="noopener">kyoto-sports.or.jp</a></dd>
+                    </dl>
+                    <p class="kd-kansai-desc">近的28m・10射場の弓道場です。会議室、更衣室、シャワー室があります。個人で使うときは予約が要らず、当日に申し込めます。</p>
+                    <details class="kd-kansai-accordion">
+                        <summary>地図を表示</summary>
+                        <div class="kd-kansai-accordion-body">
+                            <iframe class="kd-kansai-iframe" src="https://maps.google.com/maps?q=%E4%BA%AC%E9%83%BD%E5%B8%82%E6%AD%A6%E9%81%93%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC%20%E4%BA%AC%E9%83%BD%E5%BA%9C%E4%BA%AC%E9%83%BD%E5%B8%82%E5%B7%A6%E4%BA%AC%E5%8C%BA%E8%81%96%E8%AD%B7%E9%99%A2%E5%86%86%E9%A0%93%E7%BE%8E%E7%94%BA46-2&output=embed&hl=ja" title="京都市武道センター 弓道場の地図" loading="lazy"></iframe>
+                            <p><a href="https://www.google.com/maps/search/?api=1&query=%E4%BA%AC%E9%83%BD%E5%B8%82%E6%AD%A6%E9%81%93%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC%20%E4%BA%AC%E9%83%BD%E5%BA%9C%E4%BA%AC%E9%83%BD%E5%B8%82%E5%B7%A6%E4%BA%AC%E5%8C%BA%E8%81%96%E8%AD%B7%E9%99%A2%E5%86%86%E9%A0%93%E7%BE%8E%E7%94%BA46-2" target="_blank" rel="noopener">Googleマップで開く</a></p>
+                        </div>
+                    </details>
+                </div>
+
+                <div class="kd-kansai-card" id="dojo-hyogo">
+                    <h3 class="kd-kansai-card-title">兵庫県立弓道場（ひょうごけんりつきゅうどうじょう）</h3>
+                    <p class="kd-kansai-tags">
+                        <span class="kd-kansai-tag">兵庫県明石市</span>
+                        <span class="kd-kansai-tag">公営</span>
+                    </p>
+                    <dl class="kd-kansai-info">
+                        <dt>住所</dt>
+                        <dd>〒673-0847 兵庫県明石市明石公園1-27（明石公園内）</dd>
+                        <dt>電話</dt>
+                        <dd><a href="tel:0789130501">078-913-0501</a></dd>
+                        <dt>営業時間</dt>
+                        <dd>9:00〜17:00</dd>
+                        <dt>定休日</dt>
+                        <dd>毎週月曜日（月曜が祝日の場合は翌日）、年末年始（12月29日〜1月3日）</dd>
+                        <dt>アクセス</dt>
+                        <dd>明石公園の中にあります。</dd>
+                        <dt>ウェブサイト</dt>
+                        <dd><a href="https://www.hyogo-sports.jp/facility/kyudo.html" target="_blank" rel="noopener">hyogo-sports.jp</a></dd>
+                    </dl>
+                    <p class="kd-kansai-desc">近的射場と遠的射場、選手控室、更衣室があります。専用利用（貸切）は、県の予約システム「HYOGOカンタン予約」で申し込みます。</p>
+                    <details class="kd-kansai-accordion">
+                        <summary>地図を表示</summary>
+                        <div class="kd-kansai-accordion-body">
+                            <iframe class="kd-kansai-iframe" src="https://maps.google.com/maps?q=%E5%85%B5%E5%BA%AB%E7%9C%8C%E7%AB%8B%E5%BC%93%E9%81%93%E5%A0%B4%20%E5%85%B5%E5%BA%AB%E7%9C%8C%E6%98%8E%E7%9F%B3%E5%B8%82%E6%98%8E%E7%9F%B3%E5%85%AC%E5%9C%921-27&output=embed&hl=ja" title="兵庫県立弓道場の地図" loading="lazy"></iframe>
+                            <p><a href="https://www.google.com/maps/search/?api=1&query=%E5%85%B5%E5%BA%AB%E7%9C%8C%E7%AB%8B%E5%BC%93%E9%81%93%E5%A0%B4%20%E5%85%B5%E5%BA%AB%E7%9C%8C%E6%98%8E%E7%9F%B3%E5%B8%82%E6%98%8E%E7%9F%B3%E5%85%AC%E5%9C%921-27" target="_blank" rel="noopener">Googleマップで開く</a></p>
+                        </div>
+                    </details>
+                </div>
+
+                <div class="kd-kansai-card" id="dojo-oji">
+                    <h3 class="kd-kansai-card-title">神戸市立王子弓道場（こうべしりつおうじきゅうどうじょう）</h3>
+                    <p class="kd-kansai-tags">
+                        <span class="kd-kansai-tag">兵庫県神戸市</span>
+                        <span class="kd-kansai-tag">公営</span>
+                    </p>
+                    <dl class="kd-kansai-info">
+                        <dt>住所</dt>
+                        <dd>〒657-0805 兵庫県神戸市灘区青谷町1-1-1</dd>
+                        <dt>電話</dt>
+                        <dd><a href="tel:0788615734">078-861-5734</a></dd>
+                        <dt>営業時間</dt>
+                        <dd>受付 9:00〜20:30</dd>
+                        <dt>定休日</dt>
+                        <dd>毎週水曜日</dd>
+                        <dt>アクセス</dt>
+                        <dd>「王子公園駅」から徒歩約9分／「灘駅」から徒歩約11分</dd>
+                        <dt>ウェブサイト</dt>
+                        <dd><a href="https://www.kobe-spokyo.jp/spokyo/files/uploads/11_kyudo_1.pdf" target="_blank" rel="noopener">神戸市スポーツ協会の案内（PDF）</a></dd>
+                    </dl>
+                    <p class="kd-kansai-desc">神戸市弓道協会が運営している弓道場です。初段以上の経験者を迎えていて、初心者向けには年2回、初心者教室が開かれています。</p>
+                    <details class="kd-kansai-accordion">
+                        <summary>地図を表示</summary>
+                        <div class="kd-kansai-accordion-body">
+                            <iframe class="kd-kansai-iframe" src="https://maps.google.com/maps?q=%E7%A5%9E%E6%88%B8%E5%B8%82%E7%AB%8B%E7%8E%8B%E5%AD%90%E5%BC%93%E9%81%93%E5%A0%B4%20%E5%85%B5%E5%BA%AB%E7%9C%8C%E7%A5%9E%E6%88%B8%E5%B8%82%E7%81%98%E5%8C%BA%E9%9D%92%E8%B0%B7%E7%94%BA1-1-1&output=embed&hl=ja" title="神戸市立王子弓道場の地図" loading="lazy"></iframe>
+                            <p><a href="https://www.google.com/maps/search/?api=1&query=%E7%A5%9E%E6%88%B8%E5%B8%82%E7%AB%8B%E7%8E%8B%E5%AD%90%E5%BC%93%E9%81%93%E5%A0%B4%20%E5%85%B5%E5%BA%AB%E7%9C%8C%E7%A5%9E%E6%88%B8%E5%B8%82%E7%81%98%E5%8C%BA%E9%9D%92%E8%B0%B7%E7%94%BA1-1-1" target="_blank" rel="noopener">Googleマップで開く</a></p>
+                        </div>
+                    </details>
+                </div>
+
+                <div class="kd-kansai-card" id="dojo-shiga">
+                    <h3 class="kd-kansai-card-title">滋賀県立武道館（ステータシー武道館） 弓道場（しがけんりつぶどうかん きゅうどうじょう）</h3>
+                    <p class="kd-kansai-tags">
+                        <span class="kd-kansai-tag">滋賀県大津市</span>
+                        <span class="kd-kansai-tag">公営</span>
+                    </p>
+                    <dl class="kd-kansai-info">
+                        <dt>住所</dt>
+                        <dd>〒520-0801 滋賀県大津市におの浜4-2-15</dd>
+                        <dt>電話</dt>
+                        <dd><a href="tel:0775218311">077-521-8311</a></dd>
+                        <dt>営業時間</dt>
+                        <dd>8:30〜21:30</dd>
+                        <dt>定休日</dt>
+                        <dd>月曜日、年末年始（12月29日〜1月3日）</dd>
+                        <dt>アクセス</dt>
+                        <dd>JR琵琶湖線「膳所駅」から徒歩約20分</dd>
+                        <dt>ウェブサイト</dt>
+                        <dd><a href="https://cocospo.go.jp/facility/22814" target="_blank" rel="noopener">ここスポ（スポーツ庁）</a></dd>
+                    </dl>
+                    <p class="kd-kansai-desc">近的10人立と遠的6人立の弓道場があります。県の学習情報サイトには、10回ずつ2期に分けた弓道教室の案内が載ったことがあります。最新の予定は電話で確認してください。</p>
+                    <details class="kd-kansai-accordion">
+                        <summary>地図を表示</summary>
+                        <div class="kd-kansai-accordion-body">
+                            <iframe class="kd-kansai-iframe" src="https://maps.google.com/maps?q=%E6%BB%8B%E8%B3%80%E7%9C%8C%E7%AB%8B%E6%AD%A6%E9%81%93%E9%A4%A8%20%E6%BB%8B%E8%B3%80%E7%9C%8C%E5%A4%A7%E6%B4%A5%E5%B8%82%E3%81%AB%E3%81%8A%E3%81%AE%E6%B5%9C4-2-15&output=embed&hl=ja" title="滋賀県立武道館（ステータシー武道館） 弓道場の地図" loading="lazy"></iframe>
+                            <p><a href="https://www.google.com/maps/search/?api=1&query=%E6%BB%8B%E8%B3%80%E7%9C%8C%E7%AB%8B%E6%AD%A6%E9%81%93%E9%A4%A8%20%E6%BB%8B%E8%B3%80%E7%9C%8C%E5%A4%A7%E6%B4%A5%E5%B8%82%E3%81%AB%E3%81%8A%E3%81%AE%E6%B5%9C4-2-15" target="_blank" rel="noopener">Googleマップで開く</a></p>
+                        </div>
+                    </details>
+                </div>
+
+                <div class="kd-kansai-card" id="dojo-kashihara">
+                    <h3 class="kd-kansai-card-title">奈良県立橿原公苑弓道場（ならけんりつかしはらこうえんきゅうどうじょう）</h3>
+                    <p class="kd-kansai-tags">
+                        <span class="kd-kansai-tag">奈良県橿原市</span>
+                        <span class="kd-kansai-tag">公営</span>
+                    </p>
+                    <dl class="kd-kansai-info">
+                        <dt>住所</dt>
+                        <dd>〒634-0065 奈良県橿原市畝傍町53（奈良県立橿原公苑内）</dd>
+                        <dt>電話</dt>
+                        <dd><a href="tel:0744222462">0744-22-2462</a></dd>
+                        <dt>営業時間</dt>
+                        <dd>9:00〜21:00（受付 8:30〜17:00）</dd>
+                        <dt>定休日</dt>
+                        <dd>年末年始</dd>
+                        <dt>アクセス</dt>
+                        <dd>近鉄「畝傍御陵前駅」から徒歩約5分（駐車場あり）</dd>
+                        <dt>ウェブサイト</dt>
+                        <dd><a href="https://www.pref.nara.jp/20170.htm" target="_blank" rel="noopener">pref.nara.jp</a></dd>
+                    </dl>
+                    <p class="kd-kansai-desc">8的の弓道場です。橿原市弓道協会が金曜の夜に練習していて、5月から8月には初心者向けの弓道スクールを開いています。</p>
+                    <details class="kd-kansai-accordion">
+                        <summary>地図を表示</summary>
+                        <div class="kd-kansai-accordion-body">
+                            <iframe class="kd-kansai-iframe" src="https://maps.google.com/maps?q=%E5%A5%88%E8%89%AF%E7%9C%8C%E7%AB%8B%E6%A9%BF%E5%8E%9F%E5%85%AC%E8%8B%91%E5%BC%93%E9%81%93%E5%A0%B4%20%E5%A5%88%E8%89%AF%E7%9C%8C%E6%A9%BF%E5%8E%9F%E5%B8%82%E7%95%9D%E5%82%8D%E7%94%BA53&output=embed&hl=ja" title="奈良県立橿原公苑弓道場の地図" loading="lazy"></iframe>
+                            <p><a href="https://www.google.com/maps/search/?api=1&query=%E5%A5%88%E8%89%AF%E7%9C%8C%E7%AB%8B%E6%A9%BF%E5%8E%9F%E5%85%AC%E8%8B%91%E5%BC%93%E9%81%93%E5%A0%B4%20%E5%A5%88%E8%89%AF%E7%9C%8C%E6%A9%BF%E5%8E%9F%E5%B8%82%E7%95%9D%E5%82%8D%E7%94%BA53" target="_blank" rel="noopener">Googleマップで開く</a></p>
+                        </div>
+                    </details>
+                </div>
+
+                <div class="kd-kansai-card" id="dojo-nara">
+                    <h3 class="kd-kansai-card-title">ロート奈良弓道場（奈良市弓道場）（ろーとならきゅうどうじょう）</h3>
+                    <p class="kd-kansai-tags">
+                        <span class="kd-kansai-tag">奈良県奈良市</span>
+                        <span class="kd-kansai-tag">公営</span>
+                    </p>
+                    <dl class="kd-kansai-info">
+                        <dt>住所</dt>
+                        <dd>〒630-8108 奈良市法蓮佐保山4-6-2</dd>
+                        <dt>電話</dt>
+                        <dd><a href="tel:0742276163">0742-27-6163（ロート奈良第二武道場）</a></dd>
+                        <dt>営業時間</dt>
+                        <dd>9:00〜21:00</dd>
+                        <dt>定休日</dt>
+                        <dd>水曜日（祝日のときは翌日など）、12月26日〜1月5日</dd>
+                        <dt>アクセス</dt>
+                        <dd>近鉄奈良駅から徒歩約22分／奈良交通バス「市営球場」から徒歩約3分</dd>
+                        <dt>ウェブサイト</dt>
+                        <dd><a href="https://www.city.nara.lg.jp/soshiki/22/5385.html" target="_blank" rel="noopener">奈良市ホームページ</a></dd>
+                    </dl>
+                    <p class="kd-kansai-desc">射場と的場のほか、巻藁道場があります。申し込みは、奈良市の公共施設予約システムでできます。</p>
+                    <details class="kd-kansai-accordion">
+                        <summary>地図を表示</summary>
+                        <div class="kd-kansai-accordion-body">
+                            <iframe class="kd-kansai-iframe" src="https://maps.google.com/maps?q=%E3%83%AD%E3%83%BC%E3%83%88%E5%A5%88%E8%89%AF%E5%BC%93%E9%81%93%E5%A0%B4%20%E5%A5%88%E8%89%AF%E7%9C%8C%E5%A5%88%E8%89%AF%E5%B8%82%E6%B3%95%E8%93%AE%E4%BD%90%E4%BF%9D%E5%B1%B14-6-2&output=embed&hl=ja" title="ロート奈良弓道場（奈良市弓道場）の地図" loading="lazy"></iframe>
+                            <p><a href="https://www.google.com/maps/search/?api=1&query=%E3%83%AD%E3%83%BC%E3%83%88%E5%A5%88%E8%89%AF%E5%BC%93%E9%81%93%E5%A0%B4%20%E5%A5%88%E8%89%AF%E7%9C%8C%E5%A5%88%E8%89%AF%E5%B8%82%E6%B3%95%E8%93%AE%E4%BD%90%E4%BF%9D%E5%B1%B14-6-2" target="_blank" rel="noopener">Googleマップで開く</a></p>
+                        </div>
+                    </details>
+                </div>
+
+                <div class="kd-kansai-card" id="dojo-tanabe">
+                    <h3 class="kd-kansai-card-title">田辺市立弓道場（たなべしりつきゅうどうじょう）</h3>
+                    <p class="kd-kansai-tags">
+                        <span class="kd-kansai-tag">和歌山県田辺市</span>
+                        <span class="kd-kansai-tag">公営</span>
+                    </p>
+                    <dl class="kd-kansai-info">
+                        <dt>住所</dt>
+                        <dd>〒646-0058 和歌山県田辺市目良42-1</dd>
+                        <dt>電話</dt>
+                        <dd><a href="tel:0739252531">0739-25-2531（田辺市教育委員会スポーツ振興課）</a></dd>
+                        <dt>営業時間</dt>
+                        <dd>8:00〜21:30</dd>
+                        <dt>定休日</dt>
+                        <dd>公式の情報を確認できませんでした。電話で確認してください</dd>
+                        <dt>アクセス</dt>
+                        <dd>阪和自動車道 南紀田辺ICから車で約5分／JR紀伊田辺駅から車で約10分</dd>
+                        <dt>ウェブサイト</dt>
+                        <dd><a href="https://www.city.tanabe.lg.jp/soshiki/kyoikuiinkai/5/1_1/3/1880.html" target="_blank" rel="noopener">田辺市ホームページ</a></dd>
+                    </dl>
+                    <p class="kd-kansai-desc">近的12人射（28m）と遠的9人射（60m）がある大きな弓道場で、2015年の紀の国わかやま国体の会場になりました。駐車場は普通車202台です。使うときは、市の窓口で申請します。</p>
+                    <details class="kd-kansai-accordion">
+                        <summary>地図を表示</summary>
+                        <div class="kd-kansai-accordion-body">
+                            <iframe class="kd-kansai-iframe" src="https://maps.google.com/maps?q=%E7%94%B0%E8%BE%BA%E5%B8%82%E7%AB%8B%E5%BC%93%E9%81%93%E5%A0%B4%20%E5%92%8C%E6%AD%8C%E5%B1%B1%E7%9C%8C%E7%94%B0%E8%BE%BA%E5%B8%82%E7%9B%AE%E8%89%AF42-1&output=embed&hl=ja" title="田辺市立弓道場の地図" loading="lazy"></iframe>
+                            <p><a href="https://www.google.com/maps/search/?api=1&query=%E7%94%B0%E8%BE%BA%E5%B8%82%E7%AB%8B%E5%BC%93%E9%81%93%E5%A0%B4%20%E5%92%8C%E6%AD%8C%E5%B1%B1%E7%9C%8C%E7%94%B0%E8%BE%BA%E5%B8%82%E7%9B%AE%E8%89%AF42-1" target="_blank" rel="noopener">Googleマップで開く</a></p>
+                        </div>
+                    </details>
+                </div>
+            </div>
+
+            <p class="kd-kansai-note">初めて使うときは、個人利用の条件（講習や認定が必要な場合があります）を、先に弓道場へ確認してください。初心者は、各地の弓道教室や、道場・弓道協会の初心者向け教室から始めると安心です。</p>
+            <p class="kd-kansai-caption">情報は2026年11月に、各弓道場や自治体・運営団体の公式ページと、<a href="https://www.kyudo.jp/map/" target="_blank" rel="noopener">全日本弓道連盟の全国弓道場マップ</a>で確認しました。営業時間や定休日、料金は変わることがあるので、お出かけの前に公式の情報を確認してください。</p>
+        </section>
+
+        <!-- ▼ 見学から入会までの流れ ▼ -->
+        <!-- <section class="page-block">
+            <h2>見学から入会までの流れ</h2>
+            <ol class="guide-flow">
+                <li><strong>連絡する</strong>見学の可否、日時、持ち物を電話やメールで確認します。</li>
+                <li><strong>見学する</strong>動きやすい服装で行き、道場の雰囲気と練習内容を見ます。</li>
+                <li><strong>体験する</strong>体験できる場合は、ゴム弓などで基本の動きを教わります。</li>
+                <li><strong>入会を決める</strong>費用、練習日、通いやすさを確認してから決めます。</li>
+            </ol>
+        </section> -->
+
+        <!-- ▼ 道場に聞いてみたいことがあれば ▼ -->
+        <!-- <section class="page-block page-cta">
+            <h2>道場に聞いてみたいことがあれば</h2>
+            <p><a class="page-button" href="contact.php">お問い合わせはこちら</a></p>
+        </section> -->
+        <div class="scroll-top">
+            <a href="#">
+                <img src="./img/top_button.png" width="50" height="50" alt="TOPへ戻る">
+            </a>
+        </div>
+    </main>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-logo">
+                    <div class="emblem"><span>弓</span></div>
+                    <div class="text-group">
+                        <div class="title">弓道びぎなーず!</div>
+                        <div class="slogan">SLOGAN HERE</div>
+                    </div>
+                </div>
+                <p class="copyright"><small>Copyright &copy; 2026 All Rights Reserved.</small></p>
+            </div>
+            <p class="footer-disclaimer">このサイトは、弓道初心者のための情報提供を目的とした架空のウェブサイトです。実際の弓道に関する情報は、公式な団体や専門家の指導を参考にしてください。</p>
+        </div>
+    </footer>
+    <!-- Bootstrap のメニュー（スマホのボタン）に必要 -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>

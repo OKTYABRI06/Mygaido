@@ -1,0 +1,1214 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    isolation: isolate;
+    /* 背景をbodyの重なりの中に保つ */
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    /* 本文の背面 */
+    pointer-events: none;
+    /* クリックを妨げない */
+    background-color: #f89174;
+    background-image: linear-gradient(to bottom, #ffc778 0%, #f89174 100%);
+}
+
+header {
+    background-color: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+}
+
+/* 「弓」のエンブレム部分（背景の3色ボーダー） */
+.emblem {
+    width: 36px;
+    height: 36px;
+    border: 2px solid #3c342e;
+    /* 濃いブラウンの縁取り */
+    background: linear-gradient(to bottom,
+            #f0a85d 0%, #f0a85d 33%,
+            #7cb3af 33%, #7cb3af 66%,
+            #e35555 66%, #e35555 100%);
+    /* オレンジ、青緑、赤の3色グラデーション */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    box-sizing: border-box;
+}
+
+/* エンブレム内の「弓」の文字 */
+.emblem span {
+    font-size: 20px;
+    font-weight: 900;
+    color: #3c342e;
+    text-shadow:
+        1px 1px 0 #fff,
+        -1px 1px 0 #fff,
+        1px -1px 0 #fff,
+        -1px -1px 0 #fff;
+    /* 白い細い縁取り */
+}
+
+/* テキストグループ（縦並び） */
+.text-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* 「弓道びぎなーず」のタイトル */
+.title {
+    font-size: 15px;
+    font-weight: 900;
+    color: #5a4f46;
+    letter-spacing: 0.03em;
+    line-height: 1.2;
+    /* 画像に合わせたレトロな立体感を再現 */
+    text-shadow:
+        1px 1px 0 #fff,
+        2px 2px 0 #cdbba7;
+    /* 薄いブラウングレーのシャドウ */
+}
+
+/* 「SLOGAN HERE」のスローガン */
+.slogan {
+    text-align: center;
+    font-size: 8px;
+    font-weight: 700;
+    color: #8c7e74;
+    letter-spacing: 0.15em;
+    margin-top: 2px;
+    line-height: 1;
+}
+
+/*======================Bootstrap 3 との調整============================================================*/
+
+/* Bootstrap を読み込むと文字の大きさなどが変わるので、元の見た目に戻す */
+body {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #333333;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+a {
+    color: #a55a1a;
+}
+
+a:hover,
+a:focus {
+    color: #7a3f10;
+    text-decoration: none;
+}
+
+/*======================header（Bootstrap のナビゲーションバー）============================================================*/
+
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+}
+
+.navbar-default {
+    background-color: #ffffff;
+    border-color: #181717;
+    border-width: 0 0 2px 0;
+}
+
+/* ロゴ（エンブレム＋タイトル） */
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    height: auto;
+    padding: 7px 15px;
+}
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    background-color: transparent;
+}
+
+/* メニューの文字 */
+.navbar-default .navbar-nav>li>a {
+    color: #4a5568;
+    font-weight: 600;
+}
+
+.navbar-default .navbar-nav>li>a:hover,
+.navbar-default .navbar-nav>li>a:focus {
+    color: #a55a1a;
+    background-color: transparent;
+}
+
+/* 今開いているページ */
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:hover,
+.navbar-default .navbar-nav>.active>a:focus {
+    color: #3c342e;
+    background-color: #fffaf4;
+    box-shadow: inset 0 -3px 0 #ffaf58;
+}
+
+/* スマホのメニューボタン */
+.navbar-default .navbar-toggle {
+    border-color: #5a4f46;
+}
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+    background-color: #fffaf4;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #5a4f46;
+}
+
+.navbar-default .navbar-collapse {
+    border-color: #e0e0e0;
+}
+
+/*===================================main start=====================================================*/
+
+.container {
+    max-width: 970px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", sans-serif;
+    color: #333333;
+    line-height: 1.8;
+}
+
+.section01 {
+    margin-bottom: 70px;
+}
+
+/* メイン画像（レスポンシブ対応） */
+.main img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    /* 角を少し丸く */
+
+}
+
+.intro-text-A h2 {
+    font-size: 20px;
+    padding: 0.5em;
+    /* 文字周りの余白 */
+    color: #494949;
+    /* 文字色 */
+    /*線の種類（実線） 太さ 色*/
+    border-bottom: solid 3px black;
+    margin-top: 30px;
+    /* 上の段落（pタグ）との隙間 */
+    margin-bottom: 15px;
+    /* 下の段落（pタグ）との隙間 */
+
+}
+
+.cardbox {
+    display: flex;
+    gap: 20px;
+    /* カード同士の間隔 */
+    margin-top: 30px;
+}
+
+/* 各セクション（カード本体） */
+.section {
+    flex: 1;
+    /* 2つのカードを均等な幅にする */
+    display: flex;
+    align-items: flex-start;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+    text-decoration: none;
+}
+
+.section:hover {
+    transform: translateY(-3px);
+    /* マウスを乗せたときに少し浮かす */
+}
+
+/* 数字（1, 2）の丸いアイコン */
+.section-number {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #7cb3af;
+    /* 以前のロゴに合わせた青緑色 */
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-right: 15px;
+    flex-shrink: 0;
+    /* 数字が潰れないように固定 */
+}
+
+/* カード内のテキスト設定 */
+.section-content {
+    flex: 1;
+}
+
+.section-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #3c342e;
+    margin: 20px 0 10px 0;
+}
+
+.section-description {
+    font-size: 14px;
+    color: #666666;
+    margin: 0;
+}
+
+/* 画面幅が狭い時（スマホ）は縦並びにする設定 */
+@media (max-width: 768px) {
+    .cardbox {
+        flex-direction: column;
+    }
+}
+
+/*===================================section02（3つの成長）=====================================================*/
+.section02 {
+    margin-bottom: 70px;
+}
+
+/* =========================================
+   1. グリッド設定
+========================================= */
+
+.cs-feat-st2-grid {
+    display: grid;
+    gap: 30px;
+    width: 100%;
+    margin-bottom: 2em;
+}
+
+/* =========================================
+   2. カード本体のデザイン
+========================================= */
+
+.cs-feat-st2-item {
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 40px 20px 20px 20px;
+    /* 上部に余白を追加して数字を配置 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* =========================================
+   3. ナンバリングデザイン
+========================================= */
+
+.cs-feat-st2-number {
+    position: absolute;
+    top: -15px;
+    left: 20px;
+    font-size: 5rem;
+    font-weight: 900;
+    line-height: 1;
+    color: #c7ced4;
+    /* 背景に馴染む薄いグレー */
+    transition: color 0.3s ease;
+}
+
+/* =========================================
+   4. テキストデザイン
+========================================= */
+
+.cs-feat-st2-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1a202c;
+    margin-bottom: 16px;
+    position: relative;
+    /* 数字の上にテキストを置くため */
+}
+
+.cs-feat-st2-text {
+    font-size: 1.5rem;
+    line-height: 1.7;
+    color: #4a5568;
+    margin: 0;
+}
+
+/* =========================================
+   5. レスポンシブ対応
+========================================= */
+
+@media screen and (max-width: 480px) {
+    .cs-feat-st2-item {
+        padding: 32px 24px 24px;
+    }
+}
+
+/* ===== 文字の強調（マーカー） ===== */
+.highlight {
+    font-weight: bold;
+    background: linear-gradient(transparent 60%, #ffeed1 60%);
+}
+
+/* ===================================================
+   フッター全体のスタイル設定
+   =================================================== */
+
+.site-footer {
+    /* 変数が無い場合のフォールバックとして濃いブラウン（#3c342e）を設定 */
+    background: var(--navy, #fffaf4);
+    color: rgba(255, 255, 255, 0.5);
+    /* 上下の余白：2xl相当の40px〜50pxに設定 */
+    padding: var(--space-2xl, 45px) 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    margin-top: 50px;
+    /* 上のコンテンツとの間隔を確保 */
+}
+
+/* フッター内部の横並びレイアウト（ロゴと著作権） */
+.footer-inner {
+    max-width: 970px;
+    /* メインコンテンツの幅に合わせる */
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--space-md, 20px);
+}
+
+/* フッター用ロゴ（エンブレム ＋ テキスト） */
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    /* エンブレムと文字の間の隙間 */
+    font-family: var(--font-serif), 'Hiragino Mincho ProN', serif;
+    color: rgba(255, 255, 255, 0.8);
+    letter-spacing: 0.08em;
+}
+
+/* タイトルとスローガンの縦並び設定 */
+.footer-logo .text-group {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+/* 著作権テキスト */
+.copyright {
+    font-size: 0.72rem;
+    letter-spacing: 0.05em;
+    color: rgba(88, 64, 64, 0.4);
+}
+
+.footer-disclaimer {
+    font-size: 0.72rem;
+    letter-spacing: 0.05em;
+    color: rgba(88, 64, 64, 0.4);
+    margin-top: 20px;
+    border-top: 1px solid rgba(88, 64, 64, 0.2);
+    text-align: center;
+    padding-top: 10px;
+}
+
+/* ===================================================
+   トップへ戻るボタン（固定配置）
+   =================================================== */
+
+.scroll-top {
+    position: fixed;
+    right: 90px;
+    bottom: 30px;
+    z-index: 100;
+    width: 44px;
+    height: 44px;
+    background-color: #1a1a1a;
+    /* 締まりのある黒ベース */
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    /* まん丸のボタン */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    text-decoration: none;
+}
+
+/* マウスを乗せた（ホバー）時の小気味良いリアクション */
+.scroll-top:hover {
+    background-color: #ffaf58;
+    /* 見出しのアクセントに合わせたオレンジ色に変身 */
+    transform: translateY(-4px);
+    /* ひょこっと上に跳ねる */
+}
+.scroll-keisan {
+  position: fixed;
+    right: 180px;
+    bottom: 30px;
+    z-index: 100;
+    width: 44px;
+    height: 44px;
+    background-color: #1a1a1a;
+    /* 締まりのある黒ベース */
+    border: 2px solid #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    text-decoration: none;
+}
+.scroll-keisan img {
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+/* ホバー時の動き */
+.scroll-keisan:hover {
+    background-color: #ffaf58;
+    transform: translateY(-4px);
+}
+
+/* スマホ時の位置調整 */
+@media (max-width: 768px) {
+    .scroll-keisan {
+        right: 90px; /* ★隣の丸ボタン(right: 25px想定)と重ならないように少し左にずらす */
+        bottom: 90px;
+    }
+}
+/* ===== ページ全体 ===== */
+
+/* about.html / shop.html / dojos.html / index.html（道具の選び方・保管）で共通 */
+.page-main {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px 60px;
+    line-height: 1.9;
+    color: #333333;
+}
+
+.guide-section {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 50px 20px 0;
+    line-height: 1.9;
+    color: #333333;
+}
+
+/* ===== 大見出し（h1） ===== */
+.page-top {
+    padding: 30px 0 10px;
+}
+
+.page-top h1,
+.guide-head h1 {
+    margin: 40px 0 20px;
+    padding: 0.5em;
+    font-size: 28px;
+    color: #494949;
+    /*線の種類（実線） 太さ 色*/
+    border-bottom: solid 3px black;
+}
+
+.page-top p {
+    margin: 0;
+}
+
+/* ===== 中見出し（h2） ===== */
+.page-block {
+    padding-top: 10px;
+}
+
+.guide-item {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 50px 20px 0;
+    line-height: 1.9;
+}
+
+.page-block h2,
+.guide-item h2 {
+    margin: 40px 0 20px;
+    padding: 0.5em;
+    font-size: 20px;
+    color: #494949;
+
+    display: inline-block;
+    padding: 0.5em 1em;
+    color: #555555;
+    background: #f0f0f0;
+    border-left: 4px dotted rgba(0, 0, 0, 0.1);
+    border-right: 4px dotted rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    transform: rotate(-2deg);
+}
+
+
+.guide-sub {
+    margin: 25px 0 10px;
+    font-size: 18px;
+    color: #3c342e;
+}
+
+.guide-lead {
+    margin: 0 0 15px;
+}
+
+.guide-list {
+    padding-left: 25px;
+}
+
+/* ===== ページ内リンク ===== */
+.guide-links {
+    margin: 15px 0 25px;
+}
+
+.guide-links a {
+    display: inline-block;
+    margin: 0 8px 8px 0;
+    padding: 5px 15px;
+    color: #3c342e;
+    border: 1px solid #5a4f46;
+    text-decoration: none;
+    background-color: #ffffff;
+}
+
+.guide-links a:hover {
+    color: #ffffff;
+    background-color: #5a4f46;
+}
+
+/* ===== おすすめ・注意・メモの枠 ===== */
+.guide-point {
+    margin: 0 0 15px;
+    padding: 10px 15px;
+    background-color: #eef6f5;
+    border-left: 5px solid #7cb3af;
+}
+
+.guide-caution {
+    margin: 0 0 15px;
+    padding: 10px 15px;
+    background-color: #fdeeee;
+    border-left: 5px solid #e35555;
+}
+
+.guide-note{
+    margin: 0 0 15px;
+    padding: 10px 15px;
+    font-size: 14px;
+    display: inline-block;
+    width: 80%;
+    padding: 1em;
+    color: #555555;
+    background: #ffeb3b;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+    transform: rotate(1deg);
+}
+
+.guide-note-contact {
+  max-width: 780px;
+  margin: 0 auto 25px;
+  padding: 12px 16px;
+  background-color: #fefaf4; /* 薄いオレンジ（案内用） */
+  border: 1px solid #fcd9b6;
+  border-radius: 8px;
+  color: #4a5568; /* 濃いグレー文字 */
+  text-align: center;
+  
+}
+
+.guide-point strong {
+    display: block;
+    color: #2f6f6a;
+}
+
+.guide-caution strong {
+    display: block;
+    color: #b02a2a;
+}
+
+/* ===== 折りたたみ（details） ===== */
+.guide-accordion {
+    margin-bottom: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+}
+
+.guide-accordion summary {
+    padding: 10px 15px;
+    font-weight: bold;
+    color: #3c342e;
+    background-color: #fffaf4;
+    cursor: pointer;
+}
+
+.guide-accordion-body {
+    padding: 5px 15px 15px;
+}
+
+.guide-accordion-body ul,
+.guide-accordion-body ol {
+    margin: 8px 0;
+    padding-left: 25px;
+}
+
+/* ===== 画像 ===== */
+.guide-img {
+    max-width: 100%;
+    height: auto;
+}
+
+.guide-caption {
+    margin: 0;
+    font-size: 13px;
+    color: #555555;
+}
+
+/* ===== 表 ===== */
+.guide-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+}
+
+.guide-table th,
+.guide-table td {
+    padding: 8px 12px;
+    text-align: left;
+    border: 1px solid #e0e0e0;
+}
+
+.guide-table thead th {
+    color: #ffffff;
+    background-color: #5a4f46;
+}
+
+.guide-table tbody th {
+    color: #3c342e;
+    background-color: #fffaf4;
+}
+
+/* ===== 小さいカード ===== */
+.guide-mini-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.guide-mini {
+    flex: 1;
+    min-width: 220px;
+    padding: 15px 18px;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-top: 3px solid #ffaf58;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.guide-mini h3 {
+    margin: 0 0 5px;
+    font-size: 17px;
+    color: #3c342e;
+}
+
+.guide-mini p {
+    margin: 0;
+    font-size: 15px;
+    color: #555555;
+}
+
+/* ===== やること / 避けること ===== */
+.guide-two {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.guide-do,
+.guide-dont {
+    flex: 1;
+    min-width: 260px;
+    padding: 10px 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+}
+
+.guide-do {
+    border-top: 4px solid #7cb3af;
+}
+
+.guide-dont {
+    border-top: 4px solid #e35555;
+}
+
+.guide-do h3,
+.guide-dont h3 {
+    margin: 0 0 5px;
+    font-size: 16px;
+}
+
+.guide-do h3 {
+    color: #2f6f6a;
+}
+
+.guide-dont h3 {
+    color: #b02a2a;
+}
+
+/* ===== 流れ（番号つきリスト） ===== */
+.guide-flow {
+    padding-left: 25px;
+}
+
+.guide-flow li {
+    margin-bottom: 10px;
+}
+
+.guide-flow strong {
+    display: block;
+    color: #5a4f46;
+}
+
+/* ===== 歴史の年表 ===== */
+.timeline {
+    margin: 0;
+    padding-left: 20px;
+    list-style: none;
+    border-left: 3px solid #ffaf58;
+}
+
+.timeline li {
+    padding: 0 0 18px 15px;
+}
+
+.timeline strong {
+    display: block;
+    color: #3c342e;
+}
+
+/* ===== 射法八節（写真つき） ===== */
+.step-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.step-photo {
+    width: 300px;
+}
+
+.step-photo img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+
+.photo-caption {
+    margin: 0;
+    font-size: 13px;
+    color: #555555;
+}
+
+.step-text {
+    flex: 1;
+    min-width: 260px;
+}
+
+.step-text h3 {
+    margin: 0 0 5px;
+    font-size: 20px;
+    color: #3c342e;
+}
+
+.step-text h3 small {
+    margin-left: 5px;
+    font-size: 13px;
+    font-weight: normal;
+    color: #555555;
+}
+
+.step-text p {
+    margin: 0 0 5px;
+}
+
+.step-no {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+    text-align: center;
+    line-height: 32px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #5a4f46;
+    border-radius: 50%;
+}
+
+/* ===== 持ち物チェックリスト（shop） ===== */
+.check-list {
+    list-style: none;
+    padding: 0;
+}
+
+.check-list li {
+    margin-bottom: 5px;
+}
+
+/* ===== 道場の情報（dojos） ===== */
+.dojo-info {
+    margin: 0;
+}
+
+.dojo-info dt {
+    font-weight: bold;
+    color: #3c342e;
+}
+
+.dojo-info dd {
+    margin: 0 0 8px;
+}
+
+/* ===== ボタンと最後の案内 ===== */
+.page-cta {
+    margin-top: 40px;
+    padding: 30px 15px;
+    text-align: center;
+    background-color: #fffaf4;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+}
+
+.page-cta h2 {
+    padding: 0;
+    background: none;
+    border-left: none;
+    margin: 0 0 15px;
+}
+
+.page-button {
+    display: inline-block;
+    margin: 5px;
+    padding: 10px 25px;
+    font-weight: bold;
+    color: #3c342e;
+    background-color: #ffaf58;
+    border: 2px solid #ffaf58;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.page-button:hover,
+.page-button:focus {
+    color: #ffffff;
+    background-color: #3c342e;
+    border-color: #3c342e;
+}
+
+.page-button-sub {
+    background-color: #ffffff;
+    border-color: #3c342e;
+}
+
+/* ===== お問い合わせフォームの追加部品（contact.html） ===== */
+.required {
+    display: inline-block;
+    padding: 0 6px;
+    font-size: 12px;
+    font-weight: normal;
+    color: #ffffff;
+    background-color: #e35555;
+    border-radius: 3px;
+}
+
+.contact-form select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+}
+
+.form-group.form-check label {
+    font-weight: normal;
+}
+
+.form-group.form-check input[type="checkbox"] {
+    width: auto;
+    margin-right: 8px;
+}
+/* ===== 関西の弓道場（一覧・簡易マップ・地図）。道具店ページと同じデザイン ===== */
+
+.kd-kansai-section {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 2rem 1.25rem;
+    font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+    color: #333;
+    font-size: 16px;
+    line-height: 1.7;
+    box-sizing: border-box;
+}
+
+.kd-kansai-section *,
+.kd-kansai-section *::before,
+.kd-kansai-section *::after {
+    box-sizing: inherit;
+    font-family: inherit;
+}
+
+.kd-kansai-heading {
+    font-size: 26px;
+    border-bottom: 3px solid #d96b27;
+    padding-bottom: 0.5rem;
+    margin: 0 0 1rem;
+}
+
+.kd-kansai-lead {
+    font-size: 16px;
+    margin: 0 0 2rem;
+}
+
+.kd-kansai-sub {
+    font-size: 20px;
+    margin: 2rem 0 1rem;
+    padding-left: 0.75rem;
+    border-left: 4px solid #d96b27;
+}
+
+.kd-kansai-caption {
+    font-size: 14px;
+    color: #666;
+    margin: 0.75rem 0 0;
+}
+
+.kd-kansai-note {
+    background-color: #f7f7f7;
+    border-radius: 6px;
+    padding: 1rem 1.25rem;
+    margin: 2rem 0 0;
+    font-size: 15px;
+}
+
+.kd-kansai-map {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+}
+
+.kd-kansai-tile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0.9rem 1rem;
+    border-radius: 8px;
+    background-color: #f4f4f4;
+    border: 2px solid #e0e0e0;
+    text-decoration: none;
+    color: #888;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.kd-kansai-tile-has {
+    background-color: #fff8f3;
+    border-color: #e67e22;
+    color: #333;
+}
+
+.kd-kansai-tile-has:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(230, 126, 34, 0.2);
+}
+
+.kd-kansai-tile-name {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.kd-kansai-tile-info {
+    font-size: 14px;
+    margin-top: 0.25rem;
+}
+
+.kd-kansai-tile-has .kd-kansai-tile-info {
+    color: #d96b27;
+    font-weight: bold;
+}
+
+.kd-kansai-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+    gap: 1.5rem;
+    align-items: stretch;
+}
+
+.kd-kansai-card {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border: 1px solid #e2e2e2;
+    border-top: 4px solid #d96b27;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.kd-kansai-card-title {
+    font-size: 18px;
+    margin: 0 0 0.75rem;
+    line-height: 1.4;
+    min-height: 2.8em;
+    display: flex;
+    align-items: center;
+}
+
+.kd-kansai-tags {
+    margin: 0 0 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.kd-kansai-tag {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 0.25rem 0.7rem;
+    border-radius: 999px;
+    background-color: #fdf0e6;
+    color: #c85a17;
+    border: 1px solid #f3cba8;
+}
+
+.kd-kansai-info {
+    margin: 0 0 1rem;
+    padding: 0.75rem 0;
+    border-top: 1px dashed #ddd;
+    border-bottom: 1px dashed #ddd;
+    font-size: 15px;
+}
+
+.kd-kansai-info dt {
+    font-weight: bold;
+    color: #555;
+    font-size: 13px;
+    margin-top: 0.65rem;
+}
+
+.kd-kansai-info dt:first-child {
+    margin-top: 0;
+}
+
+.kd-kansai-info dd {
+    margin: 0.15rem 0 0;
+    font-size: 15px;
+    word-break: break-all;
+}
+
+.kd-kansai-info a {
+    color: #c85a17;
+    text-decoration: underline;
+}
+
+.kd-kansai-desc {
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 0 0 1.25rem;
+}
+
+.kd-kansai-accordion {
+    margin-top: auto;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #fafafa;
+    overflow: hidden;
+}
+
+.kd-kansai-accordion summary {
+    padding: 0.65rem 1rem;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #444;
+}
+
+.kd-kansai-accordion summary::-webkit-details-marker {
+    display: none;
+}
+
+.kd-kansai-accordion summary::after {
+    content: "＋";
+    color: #d96b27;
+    font-weight: bold;
+}
+
+.kd-kansai-accordion[open] summary::after {
+    content: "－";
+}
+
+.kd-kansai-accordion-body {
+    padding: 0.75rem;
+    border-top: 1px solid #ddd;
+    background-color: #fff;
+}
+
+.kd-kansai-iframe {
+    width: 100%;
+    height: 200px;
+    border: 0;
+    border-radius: 4px;
+}
+
+.kd-kansai-accordion-body p {
+    margin: 0.5rem 0 0;
+    text-align: right;
+    font-size: 14px;
+}
+
+.kd-kansai-accordion-body a {
+    color: #c85a17;
+}
+
+@media (max-width: 640px) {
+    .kd-kansai-map {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .kd-kansai-card-title {
+        min-height: auto;
+    }
+}
