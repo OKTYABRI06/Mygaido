@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="style.css">
     <title>弓道びぎなーず! 初心者のための弓道ガイド</title>
 </head>
 
