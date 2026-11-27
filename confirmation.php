@@ -1,5 +1,5 @@
 <?php
-require_once "./items.php";
+require_once "items.php";
 
 $result = [];   // フォームから受け取ったデータ
 $viewData = []; // 画面に表示するデータ

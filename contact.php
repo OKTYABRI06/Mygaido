@@ -1,5 +1,5 @@
 <?php
-require_once "./items.php";
+require_once "items.php";
 ?>
 
 <!DOCTYPE html>
